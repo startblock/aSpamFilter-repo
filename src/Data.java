@@ -60,9 +60,6 @@ public class Data {
 
         }
         return secondCounts;
-
-
-
     }
     /*   finalScores seeks to find words from the corresponding map(either ham or spam) that does not occur in their relative maps  */
     public void finalScores( Map<String, Integer> secondCounts){
@@ -73,7 +70,6 @@ public class Data {
             }
 
         }
-
 
     }
     public void createFile(Map<String, Double> scoreMap,String fileName){

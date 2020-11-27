@@ -5,9 +5,28 @@ import java.util.Scanner;
 public class fileParser {
 
 
-    public static String[] fileData(String dir){           //opens a file and returns data in String[] where each index is a word
-        String data="";
 
+    public static void directoryParser(String dir, Data training){         // parses files within a specified directory
+        //      takes com.nigel.spamTrainer.Data object in order to harvest data from files
+
+        File path = new File(dir);
+        File [] theFiles=path.listFiles();
+        assert theFiles != null;
+        for (File s:theFiles){
+            if (s.isFile()){
+
+                training.wordUpdate(fileData(dir+s.getName()));            //acceses the com.nigel.spamTrainer.Data object's wordupdate function to add words to library for model training
+
+            }
+
+
+        }
+    }
+
+
+
+        public static String[] fileData(String dir){           //opens a file and returns data in String[] where each index is a word
+        String data="";
 
         try {
 
