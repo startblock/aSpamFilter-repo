@@ -3,6 +3,33 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class fileParser {
+    public static void directoryParser(String dir, Model upper){
+
+        File path = new File(dir);
+        File [] theFiles=path.listFiles();
+        String fileName="";
+        try{
+            for (File x:theFiles){
+                if (x.isFile()){ //this line weeds out other directories/folders
+
+
+                    upper.spamDetector(fileData(dir+x.getName()));
+                    fileName=dir+x.getName();
+                    //System.out.println(fileName);
+
+                    upper.isHam();
+
+                }
+
+
+            }} catch (NullPointerException e){
+            e.printStackTrace();
+            System.out.println("----------------------------------- "+fileName);
+
+        }
+
+
+    }
 
 
 

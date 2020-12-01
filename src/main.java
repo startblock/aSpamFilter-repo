@@ -6,7 +6,7 @@ public class main {
         fileParser.directoryParser("enron1/spam/",spam);
         fileParser.directoryParser("enron1/ham/",ham);
 
-        spam.finalScores(ham.getTrainingWords());
+        spam.fnalScores(ham.getTrainingWords());
         ham.finalScores(spam.getTrainingWords());
         spam.scoreMap(spam.getTrainingWords(),spam.getTotalWords());
         ham.scoreMap(ham.getTrainingWords(),ham.getTotalWords());
