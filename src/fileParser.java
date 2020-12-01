@@ -1,3 +1,6 @@
+import spamChecker.Model;
+import trainingData.Data;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -34,7 +37,7 @@ public class fileParser {
 
 
     public static void directoryParser(String dir, Data training){         // parses files within a specified directory
-        //      takes com.nigel.spamTrainer.Data object in order to harvest data from files
+        //      takes com.nigel.spamTrainer.trainingData.Data object in order to harvest data from files
 
         File path = new File(dir);
         File [] theFiles=path.listFiles();
@@ -42,7 +45,7 @@ public class fileParser {
         for (File s:theFiles){
             if (s.isFile()){
 
-                training.wordUpdate(fileData(dir+s.getName()));            //acceses the com.nigel.spamTrainer.Data object's wordupdate function to add words to library for model training
+                training.wordUpdate(fileData(dir+s.getName()));            //acceses the com.nigel.spamTrainer.trainingData.Data object's wordupdate function to add words to library for model training
 
             }
 
