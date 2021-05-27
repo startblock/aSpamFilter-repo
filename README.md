@@ -11,6 +11,7 @@ It is 97.6% accurate when tested on training data.
 # How to run 
 
 Requires java. 
+Run from the file src/com/nigel/spamChecker/Main.java
 The console will promt you to specify a .txt file to analyze whether its spam or not.
 For example the string on line 10 will direct the console to a txt file within the package.
 
