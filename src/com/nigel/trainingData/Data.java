@@ -1,4 +1,4 @@
-package trainingData;
+package com.nigel.trainingData;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

@@ -1,6 +1,6 @@
-package spamChecker;
+package com.nigel.spamChecker;
 
-import spamChecker.Model;
+import com.nigel.fileParser;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ public class mainModel {
         Scanner userInputDir=new Scanner(System.in);
         String dir=userInputDir.nextLine();
         tester.spamDetector(fileParser.fileData(dir+"/"));
-        System.out.println("is this normal email? "+ tester.isHam());
+        System.out.println("is this spam? "+ !tester.isHam());
 
         // 97.6% accurate!  especially good at recognising ham!
 

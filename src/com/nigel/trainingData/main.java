@@ -1,6 +1,7 @@
-package trainingData;
+package com.nigel.trainingData;
 
-import trainingData.Data;
+
+import com.nigel.fileParser;
 
 public class main {
 
